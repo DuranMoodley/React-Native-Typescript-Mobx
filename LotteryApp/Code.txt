@@ -1,0 +1,142 @@
+<TouchableOpacity disabled={betStore.maxSelection && !item.isSelected}
+
+
+const updateState = () => {
+		// const newState = lottoNumbers.map(obj => {
+		// 	return { number: obj.number, isSelected: false }
+		// });
+
+		// const res = lottoNumbers.map((item) => {
+		// 	// if (item.isSelected) {
+		// 	// 	return {
+		// 	// 		...item,
+		// 	// 		id: 0,
+		// 	// 		isSelected: false,
+		// 	// 	};
+		// 	// }
+		// 	return { id: 0, isSelected: false };
+		// });
+
+if (this.userLottoSelection.length > 0) {
+			this.userLottoSelection.map((item) => {
+				if (item.isSelected) {
+					return { ...item, isSelected: false }
+				}
+
+				return { item };
+			});
+		}
+
+module.exports = {
+	preset: 'react-native',
+	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+
+module.exports = {
+	preset: 'ts-jest',
+	testEnvironment: 'node',
+	transform: {
+		'^.+\\.ts?$': 'ts-jest',
+	},
+	transformIgnorePatterns: ['<rootDir>/node_modules/'],
+};
+};
+
+		//console.log(res);
+		//setLottoNumbers(res);
+		// setLottoNumbers(current =>
+		// 	current.map(obj => {
+		// 		// if (obj.isSelected) {
+		// 		// 	console.log('here', obj)
+		// 		// 	return { isSelected: !obj.isSelected, number: obj.number, };
+		// 		// }
+
+		// 		return { number: obj.number, isSelected: false };
+		// 	}),
+		// );
+		// let newObj = lottoNumbers.map(current => ({
+		// 	...current,
+		// 	isSelected: false,
+		// }));
+		// // setLottoNumbers(lottoNumbers =>
+		// // 	lottoNumbers.map((item) => {
+		// // 		return { number: item.number, isSelected: false };
+		// // 	})
+		// // );
+		// console.log(newObj);
+
+
+const res = lottoNumbers.map((lottoNumber) => {
+			return betStore.userLottoSelection.map((selection) => {
+				if (selection.number === lottoNumber.number) {
+					console.log('here')
+					return { ...selection }
+				}
+
+				return { ...lottoNumber };
+			})
+		})
+
+
+		//setLottoNumbers([...new2]);
+		console.log(lottoNumbers);
+
+for (let index = 0; index < lottoNumbers.length; index++) {
+			const element = lottoNumbers[index];
+			for (let index2 = 0; index2 < betStore.userLottoSelection.length; index2++) {
+				const element2 = betStore.userLottoSelection[index2];
+				if (element.number === element2.number) {
+					setLottoNumbers(lottoNumbers =>
+						lottoNumbers.map((item) => {
+							return { number: item.number, isSelected: false };
+						})
+					);
+				}
+			}
+		}
+	};
+
+
+ "@react-navigation/native": "^6.0.13",
+    "@react-navigation/native-stack": "^6.9.1",
+    "@testing-library/jest-native": "^5.0.0",
+    "@testing-library/react-native": "^11.2.0",
+    "mobx": "^6.6.2",
+    "mobx-persist-store": "^1.1.2",
+    "mobx-react": "^7.5.3",
+    "react": "17.0.2",
+    "react-native": "0.67.2",
+    "react-native-gesture-handler": "^2.7.1",
+    "react-native-safe-area-context": "^4.4.1",
+    "react-native-screens": "^3.18.1",
+    "react-native-super-grid": "^4.6.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "semistandard": "^16.0.1",
+    "standard": "^16.0.4",
+    "standardx": "^7.0.0"
+
+ "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|@?react-navigation)"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
